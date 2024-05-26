@@ -65,21 +65,5 @@ function getColorFromOccupancy(occupancy) {
 
 getColorFromOccupancy(); // Funktion aufrufen, um die Farbe des Knopfes zu bestimmen
 
-// H2 Titel bewegen
 
-const title = document.querySelector('.moving-title');
-let position = 0;
-const screenWidth = window.innerWidth;
-
-function moveTitle() {
-    position += 2; // Adjust speed as needed
-    if (position > screenWidth) {
-        position = -title.offsetWidth;
-    }
-    title.style.transform = `translateX(${position}px)`;
-
-    requestAnimationFrame(moveTitle);
-}
-
-moveTitle();
 

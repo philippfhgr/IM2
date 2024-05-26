@@ -5,21 +5,43 @@
 }
 
 body {
-    background-color: rgb(112, 128, 144); /* dim gray */
-    color: white; /* Ensuring good contrast with text */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-
+  background-color:rgb(200, 215, 225);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
+li {
+  display: inline;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  padding: 20px;
+  color: black;
+}
 
 
 header {
     color: rgb(0, 0, 0);
     padding: 20px 0;
     text-align: center;   
+
+    
 }
+
 
 .popup .overlay {
   position:fixed;
@@ -88,3 +110,22 @@ header {
 #undefined {
   display: none;
 } 
+
+
+
+.two-column-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none; /* Remove default bullets */
+  padding: 0;
+  margin: 0;
+}
+
+.two-column-list li {
+  flex: 0 0 50%; /* Each item takes up 50% of the width */
+  box-sizing: border-box; /* Ensures padding and border are included in the width */
+  padding: 5px; /* Add padding for spacing */
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  margin: 5px 0;
+}
