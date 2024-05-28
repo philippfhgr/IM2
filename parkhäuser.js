@@ -1,39 +1,45 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const parkhausList = document.getElementById('parkhausList');
+    const parkingList = document.getElementById('parking-list');
 
     fetch('https://data.bs.ch/api/explore/v2.1/catalog/datasets/100088/records?limit=20')
         .then(response => response.json())
         .then(data => {
-            const results = data.results;
-            results.forEach(results => {
-                const items = results.results.items;
+            console.log('API Response:', data); // Log the entire response for debugging
+
+            const results = data.results; // Access the 'results' array
+            if (!results || !Array.isArray(results)) {
+                throw new Error('Invalid API response structure');
+            }
+
+            results.forEach(parking => {
                 const listItem = document.createElement('li');
+                let auslastungProzent = (parking.auslastung_prozent || 0).toFixed(0); // Reduziere Dezimalstellen auf 0
                 
-                // Erstelle Elemente für jede Information
-                const title = document.createElement('h2');
-                title.textContent = items.name;
-                
-                const availability = document.createElement('p');
-                availability.textContent = `${items.available_parking_spaces} freie Parkplätze von ${items.total_parking_spaces}`;
-                
-                const websiteLink = document.createElement('a');
-                websiteLink.href = items.website;
-                websiteLink.textContent = 'Webseite Parkhaus';
-                
-                const navigationLink = document.createElement('a');
-                navigationLink.href = items.navigation_link;
-                navigationLink.textContent = 'Navigation';
-                
-                // Füge Elemente dem Listenelement hinzu
-                listItem.appendChild(title);
-                listItem.appendChild(availability);
-                listItem.appendChild(websiteLink);
-                listItem.appendChild(document.createElement('br')); // Zeilenumbruch für Abstand
-                listItem.appendChild(navigationLink);
-                
-                // Füge das Listenelement zur Parkhausliste hinzu
-                parkhausList.appendChild(listItem);
+                // Überprüfen, ob der Wert negativ ist und ggf. auf 0 setzen
+                if (auslastungProzent < 0) {
+                    auslastungProzent = 0;
+                }
+
+                listItem.innerHTML = `
+                    <h2>${parking.title}</h2>
+                    <p> Total Parkplätze: ${parking.total}</p>
+                    <br>
+                    Freie Parkplätze: ${parking.free} von ${parking.total}</p>
+                    <br>
+                    <p>Auslastung: ${auslastungProzent}%</p>
+                    <br>
+                    <a href="${parking.link}" target="_blank">Webseite Parkhaus</a>
+                    <br>
+                    <a href="https://www.google.ch/maps/place/${encodeURIComponent(parking.name)}" target="_blank">Navigation</a>
+                `;
+                parkingList.appendChild(listItem);
             });
         })
-        .catch(error => console.error('Fehler beim Abrufen der Daten:', error));
+        .catch(error => {
+            console.error('Error fetching data:', error);
+            const listItem = document.createElement('li');
+            listItem.textContent = 'Fehler beim Laden der Daten';
+            parkingList.appendChild(listItem);
+        });
 });
+

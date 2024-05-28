@@ -11,6 +11,8 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* Navigationsbar */
+
 li {
   display: inline;
 }
@@ -130,7 +132,7 @@ header {
   margin: 5px 0;
 }
 
-/* About us Images */
+/* About us Bilder */
 .image-container {
   display: flex;
   flex-wrap: wrap;
@@ -156,5 +158,46 @@ header {
   height: auto;
   max-height:290px;
   border-radius: 50px;
+}
+
+/* Grundstil für die Liste */
+#parking-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none; /* Entfernt Standard-Listenpunkte */
+  padding: 0; /* Entfernt Standard-Padding */
+  margin: 0; /* Entfernt Standard-Rand */
+}
+
+/* Stil für jedes Listenelement */
+#parking-list li {
+  flex: 1 1 50%;      /* Gibt jedem Listenelement eine Basisbreite von 50% */
+  border: 1px solid #ccc; /* Rahmen um jedes Listenelement */
+  padding: 10px; /* Innenabstand */
+  margin-bottom: 10px; /* Abstand zwischen den Listenelementen */
+  background-color: #f9f9f9; /* Hintergrundfarbe */
+  border-radius: 5px; /* Abgerundete Ecken */
+}
+
+/* Stil für die Titel */
+#parking-list h2 {
+  font-size: 1.5em; /* Schriftgrösse */
+  margin: 0 0 10px 0; /* Abstand unterhalb des Titels */
+}
+
+/* Stil für die Paragrafen */
+#parking-list p {
+  margin: 0 0 10px 0; /* Abstand unterhalb des Paragrafen */
+  
+}
+
+/* Stil für die Links */
+#parking-list a {
+  color: #0066cc; /* Linkfarbe */
+  text-decoration: none; /* Keine Unterstreichung */
+}
+
+#parking-list a:hover {
+  text-decoration: underline; /* Unterstreichung beim Hover */
 }
 
