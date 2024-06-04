@@ -201,3 +201,11 @@ header {
   text-decoration: underline; /* Unterstreichung beim Hover */
 }
 
+/* Stil für die Google Maps Karte */
+#map {
+  width: 100%; /* Vollständige Breite des Containers */
+  height: 500px; /* Höhe der Karte */
+  border: 2px solid #ccc; /* Rahmen um die Karte */
+  border-radius: 10px; /* Abgerundete Ecken */
+  margin-top: 20px; /* Abstand nach oben */
+}
