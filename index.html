@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Parking BS</title>
   <link href="style.css" rel="stylesheet">
 
@@ -18,17 +18,16 @@
 <body>
   <header>
     <h1>Suechsch e Parkplatz?</h1>
-    <br> 
+
     <h2>Wähl e parkhuus uf de charte us👇</h2>
-    <script src="script.js"></script>
-
-    <br>
-
-    <div id="map"></div>
     
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFAZJZKEr2jeGpXiQXOzaMVwnJT8JrTRo&callback=initMap" async defer></script>
 
   </header>
+
+  <div id="map"></div>
+
+  <div id="handkarte">
+    <img src="https://api.mapbox.com/styles/v1/mapbox/dark-v11/static/7.597,47.5599,13.3,0/1280x900?access_token=pk.eyJ1Ijoib3VuZWgiLCJhIjoiY2x3eXd6b2t0MDE5ZTJrc2U5aGRiNXk0byJ9.dbqK1CtQ_PDd4hbNbtsrSQ" alt="">
   <div class="popup">
     <div class="overlay"></div>
     <div class="content">
@@ -231,7 +230,7 @@
       <div class="close-btn">&times;</div>
       <ul style="list-style-type: none;">
         <li>
-          <h2>Parkhaus Post Basel</h2>
+          <h2>Parkhaus Post Basel Undefined</h2>
         </li>
         <li>XY freie Parklplätze von XY </li>
         <li><a href="https://www.parkleitsystem-basel.ch/parkhaus/postbasel">Webseite Parkhaus</a></li>
@@ -289,26 +288,26 @@
 
 
   <div class="btn-container">
-    <button class="btn"> <span class="dot"></span></button>
-    <button class="btn"> <span class="dot"></span></button>
-    <button class="btn"> <span class="dot"></span></button>
-    <button class="btn"> <span class="dot"></span></button>
-    <button class="btn"> <span class="dot"></span></button>
-    <button class="btn"> <span class="dot"></span></button>
-    <button class="btn"> <span class="dot"></span></button>
-    <button id="undefined" class="btn"> <span class="dot"></span></button>
-    <button class="btn"> <span class="dot"></span></button>
-    <button class="btn"> <span class="dot"></span></button>
-    <button class="btn"> <span class="dot"></span></button>
-    <button class="btn"> <span class="dot"></span></button>
-    <button class="btn"> <span class="dot"></span></button>
-    <button class="btn"> <span class="dot"></span></button>
-    <button class="btn"> <span class="dot"></span></button>
-    <button class="btn"> <span class="dot"></span></button>
-    <button class="btn"> <span class="dot"></span></button>
+    <button class="badbahnhof"> <span class="dot"></span></button>
+    <button class="claramatte"> <span class="dot"></span></button>
+    <button class="steinen"> <span class="dot"></span></button>
+    <button class="city"> <span class="dot"></span></button>
+    <button class="storchen"> <span class="dot"></span></button>
+    <button class="aeschen"> <span class="dot"></span></button>
+    <button class="kunstmuseum"> <span class="dot"></span></button>
+    <button class="undefined"> <span class="dot"></span></button>
+    <button class="messe"> <span class="dot"></span></button>
+    <button class="europe"> <span class="dot"></span></button>
+    <button class="rebgasse"> <span class="dot"></span></button>
+    <button class="clarahuus"> <span class="dot"></span></button>
+    <button class="elisabethen"> <span class="dot"></span></button>
+    <button class="postbasel"> <span class="dot"></span></button>
+    <button class="bahnhofsued"> <span class="dot"></span></button>
+    <button class="anfos"> <span class="dot"></span></button>
+    <button class="centralbahnparking"> <span class="dot"></span></button>
   </div>
 
-
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFAZJZKEr2jeGpXiQXOzaMVwnJT8JrTRo&callback=initMap" async defer></script>
   <script src="script.js"></script>
 </body>
 

@@ -39,9 +39,7 @@ li a {
 header {
     color: rgb(0, 0, 0);
     padding: 20px 0;
-    text-align: center;   
-
-    
+    text-align: center;
 }
 
 
@@ -61,7 +59,7 @@ header {
   top:50%;
   left:50%;
   transform:translate(-50%,-50%) scale(0);
-  background:#fff;
+  background: #fff;
   width:350px;
   height: 220px;
   z-index:2;
@@ -96,9 +94,113 @@ header {
   transform:translate(-50%,-50%) scale(1);
 }
 
-.btn {
+
+.badbahnhof, .claramatte, .steinen, .city, .storchen, .aeschen, .kunstmuseum, .messe, .europe, .rebgasse, .clarahuus, .elisabethen, .bahnhofsued, .anfos, .centralbahnparking {
   background: none;
   border: 0px;
+}
+
+.undefined, .postbasel {
+  display: none;
+}
+
+.badbahnhof {
+  position: absolute;
+  top: 1000px;
+  left: 1300px;
+}
+
+.claramatte {
+  position: absolute;
+  top: 800px;
+  left: 920px;
+}
+
+.steinen {
+  position: absolute;
+  top: 1400px;
+  left: 600px;
+}
+
+.city {
+  position: absolute;
+  top: 1500px;
+  left: 500px;
+}
+
+.storchen {
+  position: absolute;
+  top: 1100px;
+  left: 800px;
+}
+
+.aeschen {
+  position: absolute;
+  top: 1100px;
+  left: 850px;
+}
+
+.kunstmuseum {
+  position: absolute;
+  top: 1200px;
+  left: 950px;
+}
+
+.messe {
+  position: absolute;
+  top: 1250px;
+  left: 980px;
+}
+
+.europe {
+  position: absolute;
+  top: 1150px;
+  left: 820px;
+}
+
+.rebgasse {
+  position: absolute;
+  top: 1200px;
+  left: 850px;
+}
+
+.clarahuus {
+  position: absolute;
+  top: 1050px;
+  left: 650px;
+}
+
+.elisabethen {
+  position: absolute;
+  top: 950px;
+  left: 680px;
+}
+
+.bahnhofsued {
+  position: absolute;
+  top: 1300px;
+  left: 980px;
+}
+
+.anfos {
+  position: absolute;
+  top: 1350px;
+  left: 830px;
+}
+
+.centralbahnparking {
+  position: absolute;
+  top: 1370px;
+  left: 860px;
+}
+
+#handkarte {
+  width: 100%; /* Vollständige Breite des Containers */
+  height: 500px; /* Höhe der Karte */
+  border: 2px solid #ccc; /* Rahmen um die Karte */
+  border-radius: 10px; /* Abgerundete Ecken */
+  margin-top: 20px; /* Abstand nach oben */
+  margin-left: 300px;
 }
 
 .dot {
@@ -108,12 +210,6 @@ header {
   border-radius: 50%;
   display: inline-block;
 }
-
-#undefined {
-  display: none;
-} 
-
-
 
 .two-column-list {
   display: flex;
@@ -209,3 +305,4 @@ header {
   border-radius: 10px; /* Abgerundete Ecken */
   margin-top: 20px; /* Abstand nach oben */
 }
+
