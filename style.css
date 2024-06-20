@@ -9,6 +9,13 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  padding: 0pt 50pt;
 }
 
 /* Navigationsbar */
@@ -233,14 +240,14 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px; /* Adjust the space between images */
+  gap: 60px; /* Adjust the space between images */
 }
 
 .image-container h2 {
   text-align: center;
   margin-top: 10px;
   font-size: 1em; /* Adjust font size as needed */
-  max-width: 200px; /* Ensure it does not exceed the image width */
+  max-width: 210px; /* Match the width of the images */
 }
 
 .image-container div {
@@ -250,9 +257,9 @@ header {
 }
 
 .image-container img {
-  width: 210px;
-  height: auto;
-  max-height:290px;
+  width: 210px; /* Set the width of all images to the same value */
+  height: 290px; /* Set the height of all images to the same value */
+  object-fit: cover; /* Ensure the image covers the container */
   border-radius: 50px;
 }
 
@@ -297,12 +304,4 @@ header {
   text-decoration: underline; /* Unterstreichung beim Hover */
 }
 
-/* Stil für die Google Maps Karte */
-#map {
-  width: 100%; /* Vollständige Breite des Containers */
-  height: 500px; /* Höhe der Karte */
-  border: 2px solid #ccc; /* Rahmen um die Karte */
-  border-radius: 10px; /* Abgerundete Ecken */
-  margin-top: 20px; /* Abstand nach oben */
-}
 
