@@ -23,13 +23,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 listItem.innerHTML = `
                     <h2>${parking.title}</h2>
                     <p> Total Parkplätze: ${parking.total}</p>
-                    <br>
                     Freie Parkplätze: ${parking.free} von ${parking.total}</p>
-                    <br>
                     <p>Auslastung: ${auslastungProzent}%</p>
-                    <br>
                     <a href="${parking.link}" target="_blank">Webseite Parkhaus</a>
-                    <br>
                     <a href="https://www.google.ch/maps/place/${encodeURIComponent(parking.name)}" target="_blank">Navigation</a>
                 `;
                 parkingList.appendChild(listItem);

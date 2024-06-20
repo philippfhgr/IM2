@@ -1,29 +1,22 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-  background-color:rgb(200, 215, 225);
+  background-color: rgb(200, 215, 225);
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-
 }
 
 p {
-  font-size: 1.2em;
+  font-size: 12pt;
   line-height: 1.5em;
-  padding: 0pt 50pt;
+  padding: 0 50px;
+  max-width: fit-content;
+}
+
+h2 {
+  font-size: 15pt;
 }
 
 /* Navigationsbar */
-
-li {
-  display: inline;
-}
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -42,163 +35,60 @@ li a {
   color: black;
 }
 
-
 header {
-    color: rgb(0, 0, 0);
-    padding: 20px 0;
-    text-align: center;
+  color: rgb(0, 0, 0);
+  padding: 20px 0;
+  text-align: center;
 }
-
 
 .popup .overlay {
-  position:fixed;
-  top:0px;
-  left:0px;
-  width:100vw;
-  height:100vh;
-  background:rgba(0,0,0,0.7);
-  z-index:1;
-  display:none;
-}
-
-.popup .content {
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%) scale(0);
-  background: #fff;
-  width:350px;
-  height: 220px;
-  z-index:2;
-  text-align:center;
-  padding:20px;
-  box-sizing:border-box;
-}
-
-.popup .close-btn{
-  cursor:pointer;
-  position:absolute;
-  right: 20px;
-  top:20px;
-  width:30px;
-  height:30px;
-  background: #222;
-  color: #fff;
-  font-size:25px;
-  font-weight:600;
-  line-height:30px;
-  text-align:center;
-  border-radius:50%;
-  
-}
-
-.popup.active .overlay{
-  display:block;
-}
-
-.popup.active .content{
-  transition:all 300ms ease-in-out;
-  transform:translate(-50%,-50%) scale(1);
-}
-
-
-.badbahnhof, .claramatte, .steinen, .city, .storchen, .aeschen, .kunstmuseum, .messe, .europe, .rebgasse, .clarahuus, .elisabethen, .bahnhofsued, .anfos, .centralbahnparking {
-  background: none;
-  border: 0px;
-}
-
-.undefined, .postbasel {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
   display: none;
 }
 
-.badbahnhof {
+.popup .content {
   position: absolute;
-  top: 1000px;
-  left: 1300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: #fff;
+  width: 350px;
+  height: 220px;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.claramatte {
+.popup .close-btn {
+  cursor: pointer;
   position: absolute;
-  top: 800px;
-  left: 920px;
+  right: 20px;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  background: #222;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
 }
 
-.steinen {
-  position: absolute;
-  top: 1400px;
-  left: 600px;
+.popup.active .overlay {
+  display: block;
 }
 
-.city {
-  position: absolute;
-  top: 1500px;
-  left: 500px;
-}
-
-.storchen {
-  position: absolute;
-  top: 1100px;
-  left: 800px;
-}
-
-.aeschen {
-  position: absolute;
-  top: 1100px;
-  left: 850px;
-}
-
-.kunstmuseum {
-  position: absolute;
-  top: 1200px;
-  left: 950px;
-}
-
-.messe {
-  position: absolute;
-  top: 1250px;
-  left: 980px;
-}
-
-.europe {
-  position: absolute;
-  top: 1150px;
-  left: 820px;
-}
-
-.rebgasse {
-  position: absolute;
-  top: 1200px;
-  left: 850px;
-}
-
-.clarahuus {
-  position: absolute;
-  top: 1050px;
-  left: 650px;
-}
-
-.elisabethen {
-  position: absolute;
-  top: 950px;
-  left: 680px;
-}
-
-.bahnhofsued {
-  position: absolute;
-  top: 1300px;
-  left: 980px;
-}
-
-.anfos {
-  position: absolute;
-  top: 1350px;
-  left: 830px;
-}
-
-.centralbahnparking {
-  position: absolute;
-  top: 1370px;
-  left: 860px;
+.popup.active .content {
+  transition: all 300ms ease-in-out;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 #handkarte {
@@ -246,7 +136,6 @@ header {
 .image-container h2 {
   text-align: center;
   margin-top: 10px;
-  font-size: 1em; /* Adjust font size as needed */
   max-width: 210px; /* Match the width of the images */
 }
 
@@ -274,34 +163,35 @@ header {
 
 /* Stil für jedes Listenelement */
 #parking-list li {
-  flex: 1 1 50%;      /* Gibt jedem Listenelement eine Basisbreite von 50% */
-  border: 1px solid #ccc; /* Rahmen um jedes Listenelement */
+  flex: 1 1 calc(50% - 20px); /* Gibt jedem Listenelement eine Basisbreite von 50%, abzüglich des Abstands */
+  margin: 10px; /* Abstand zwischen den Listenelementen */
   padding: 10px; /* Innenabstand */
-  margin-bottom: 10px; /* Abstand zwischen den Listenelementen */
+  border: 1px solid #ccc; /* Rahmen um jedes Listenelement */
   background-color: #f9f9f9; /* Hintergrundfarbe */
   border-radius: 5px; /* Abgerundete Ecken */
 }
 
 /* Stil für die Titel */
 #parking-list h2 {
-  font-size: 1.5em; /* Schriftgrösse */
+  font-size: 1.8em; /* Schriftgröße */
   margin: 0 0 10px 0; /* Abstand unterhalb des Titels */
+  color: #333;
 }
 
 /* Stil für die Paragrafen */
 #parking-list p {
-  margin: 0 0 10px 0; /* Abstand unterhalb des Paragrafen */
-  
+  margin: 5px 0; /* Abstand unterhalb des Paragrafen */
+  font-size: 1.1em; /* Schriftgröße */
+  color: #555;
 }
 
 /* Stil für die Links */
 #parking-list a {
   color: #0066cc; /* Linkfarbe */
   text-decoration: none; /* Keine Unterstreichung */
+  margin-top: 10px;
 }
 
 #parking-list a:hover {
   text-decoration: underline; /* Unterstreichung beim Hover */
 }
-
-
