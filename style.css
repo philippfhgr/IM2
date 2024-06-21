@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(200, 215, 225);
+  background-color:white;
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
@@ -9,14 +9,52 @@ p {
   font-size: 12pt;
   line-height: 1.5em;
   padding: 0 50px;
-  max-width: fit-content;
+  width: 60%;
+  text-align: center;
 }
+
+about.h1 {
+  font-size: 80pt;
+  color: black;
+} 
 
 h2 {
   font-size: 15pt;
 }
 
 /* Navigationsbar */
+ul.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+  display: flex;
+  justify-content: center; /* Zentriert die Navigationselemente */
+}
+
+ul.navbar li {
+  float: left;
+}
+
+ul.navbar li a {
+  display: block;
+  padding: 20px;
+  color: black;
+  text-decoration: none; /* Entfernt die Unterstreichung */
+  border: 2px solid #ddd; /* Füge einen Rahmen hinzu */
+  border-radius: 5px; /* Runde die Ecken ab */
+  transition: background-color 0.3s, color 0.3s; /* Übergang für Farbänderungen */
+  margin: 5px; /* Abstand zwischen den Links */
+}
+
+ul.navbar li a:hover {
+  background-color: #f0f0f0; /* Hintergrundfarbe beim Hover */
+  color: #007BFF; /* Textfarbe beim Hover */
+  border-color: #007BFF; /* Randfarbe beim Hover */
+}
+
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -261,6 +299,10 @@ img {
   /* Match the width of the images */
 }
 
+.image-container p {
+  text-align: center;
+}
+
 .image-container div {
   display: flex;
   flex-direction: column;
@@ -362,4 +404,17 @@ img {
     z-index: 1;
   }
   
+}
+
+.search-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#searchBar {
+  width: 30%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
 }

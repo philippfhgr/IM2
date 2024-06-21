@@ -8,9 +8,8 @@
   <link href="style.css" rel="stylesheet">
 </head>
 
-<ul>
-  <li><a href="about.html">Über Uns</a></li>
-  <li><a href="parkhäuser.html">Alle Parkhäuser</a></li>
+<ul class="navbar">
+  <li><a href="about.html">Die Parkhäuser und wir</a></li>
 </ul>
 
 <body>
@@ -333,6 +332,17 @@
     <button class="centralbahnparking"> <span class="dot"></span></button>
   </div>
 </div>
+
+<br>
+
+ <div class="search-container">
+  <input type="text" id="searchBar" placeholder="Parkhaus suchen..." onkeyup="filterParkingHouses()">
+</div>
+
+<main>
+  <ul id="parking-list" class="two-column-list"></ul>
+</main>
+
 
   <script src="script.js"></script>
 </body>
