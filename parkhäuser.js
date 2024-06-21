@@ -11,7 +11,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 throw new Error('Invalid API response structure');
             }
 
-            results.forEach(parking => {
+            // IDs or names of records to be skipped
+            const namesToSkip = [null, "Post Basel"]; // Example names
+
+            const filteredResults = results.filter(parking => 
+                !namesToSkip.includes(parking.name)
+            );
+
+            filteredResults.forEach(parking => {
                 const listItem = document.createElement('li');
                 let auslastungProzent = (parking.auslastung_prozent || 0).toFixed(0); // Reduziere Dezimalstellen auf 0
                 
@@ -23,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 listItem.innerHTML = `
                     <h2>${parking.title}</h2>
                     <p> Total Parkplätze: ${parking.total}</p>
-                    Freie Parkplätze: ${parking.free} von ${parking.total}</p>
+                    <p>Freie Parkplätze: ${parking.free} von ${parking.total}</p>
                     <p>Auslastung: ${auslastungProzent}%</p>
                     <a href="${parking.link}" target="_blank">Webseite Parkhaus</a>
                     <a href="https://www.google.ch/maps/place/${encodeURIComponent(parking.name)}" target="_blank">Navigation</a>

@@ -64,6 +64,7 @@ header {
   text-align: center;
   padding: 20px;
   box-sizing: border-box;
+  z-index: 3;
 }
 
 .popup .close-btn {
@@ -91,19 +92,134 @@ header {
   transform: translate(-50%, -50%) scale(1);
 }
 
+
 #handkarte {
-  width: 100%; /* Vollständige Breite des Containers */
-  height: 500px; /* Höhe der Karte */
-  border: 2px solid #ccc; /* Rahmen um die Karte */
-  border-radius: 10px; /* Abgerundete Ecken */
-  margin-top: 20px; /* Abstand nach oben */
-  margin-left: 300px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: fit-content;
 }
+
+img {
+  position: relative;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  z-index: 1;
+}
+
+
+.badbahnhof,
+.claramatte,
+.steinen,
+.city,
+.storchen,
+.aeschen,
+.kunstmuseum,
+.messe,
+.europe,
+.rebgasse,
+.clarahuus,
+.elisabethen,
+.bahnhofsued,
+.anfos,
+.centralbahnparking {
+  background: none;
+  border: 0px;
+  z-index: 2;
+  position: absolute;
+}
+
+.undefined,
+.postbasel {
+  display: none;
+}
+
+.badbahnhof {
+  top: 20px;
+  left: 200px;
+}
+
+.claramatte {
+  top: 500px;
+  left: 20px;
+}
+
+.steinen {
+  top: 400px;
+  left: 600px;
+}
+
+.city {
+  top: 500px;
+  left: 500px;
+}
+
+.storchen {
+  top: 100px;
+  left: 800px;
+}
+
+.aeschen {
+  top: 100px;
+  left: 850px;
+}
+
+.kunstmuseum {
+  top: 200px;
+  left: 950px;
+}
+
+.messe {
+  top: 650px;
+  left: 980px;
+}
+
+.europe {
+  top: 150px;
+  left: 820px;
+}
+
+.rebgasse {
+  top: 200px;
+  left: 850px;
+}
+
+.clarahuus {
+  top: 650px;
+  left: 650px;
+}
+
+.elisabethen {
+  top: 750px;
+  left: 680px;
+}
+
+.bahnhofsued {
+  top: 300px;
+  left: 980px;
+}
+
+.anfos {
+  top: 350px;
+  left: 830px;
+}
+
+.centralbahnparking {
+  top: 370px;
+  left: 860px;
+}
+
+#undefined {
+  display: none;
+}
+
 
 .dot {
   height: 25px;
   width: 25px;
-  background-color: grey;
   border-radius: 50%;
   display: inline-block;
 }
@@ -111,15 +227,19 @@ header {
 .two-column-list {
   display: flex;
   flex-wrap: wrap;
-  list-style-type: none; /* Remove default bullets */
+  list-style-type: none;
+  /* Remove default bullets */
   padding: 0;
   margin: 0;
 }
 
 .two-column-list li {
-  flex: 0 0 50%; /* Each item takes up 50% of the width */
-  box-sizing: border-box; /* Ensures padding and border are included in the width */
-  padding: 5px; /* Add padding for spacing */
+  flex: 0 0 50%;
+  /* Each item takes up 50% of the width */
+  box-sizing: border-box;
+  /* Ensures padding and border are included in the width */
+  padding: 5px;
+  /* Add padding for spacing */
   border: 1px solid #ddd;
   background-color: #f9f9f9;
   margin: 5px 0;
@@ -130,13 +250,15 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 60px; /* Adjust the space between images */
+  gap: 60px;
+  /* Adjust the space between images */
 }
 
 .image-container h2 {
   text-align: center;
   margin-top: 10px;
-  max-width: 210px; /* Match the width of the images */
+  max-width: 210px;
+  /* Match the width of the images */
 }
 
 .image-container div {
@@ -146,9 +268,12 @@ header {
 }
 
 .image-container img {
-  width: 210px; /* Set the width of all images to the same value */
-  height: 290px; /* Set the height of all images to the same value */
-  object-fit: cover; /* Ensure the image covers the container */
+  width: 210px;
+  /* Set the width of all images to the same value */
+  height: 290px;
+  /* Set the height of all images to the same value */
+  object-fit: cover;
+  /* Ensure the image covers the container */
   border-radius: 50px;
 }
 
@@ -156,42 +281,85 @@ header {
 #parking-list {
   display: flex;
   flex-wrap: wrap;
-  list-style-type: none; /* Entfernt Standard-Listenpunkte */
-  padding: 0; /* Entfernt Standard-Padding */
-  margin: 0; /* Entfernt Standard-Rand */
+  list-style-type: none;
+  /* Entfernt Standard-Listenpunkte */
+  padding: 0;
+  /* Entfernt Standard-Padding */
+  margin: 0;
+  /* Entfernt Standard-Rand */
 }
 
 /* Stil für jedes Listenelement */
 #parking-list li {
-  flex: 1 1 calc(50% - 20px); /* Gibt jedem Listenelement eine Basisbreite von 50%, abzüglich des Abstands */
-  margin: 10px; /* Abstand zwischen den Listenelementen */
-  padding: 10px; /* Innenabstand */
-  border: 1px solid #ccc; /* Rahmen um jedes Listenelement */
-  background-color: #f9f9f9; /* Hintergrundfarbe */
-  border-radius: 5px; /* Abgerundete Ecken */
+  flex: 1 1 calc(50% - 20px);
+  /* Gibt jedem Listenelement eine Basisbreite von 50%, abzüglich des Abstands */
+  margin: 10px;
+  /* Abstand zwischen den Listenelementen */
+  padding: 15px;
+  /* Innenabstand */
+  background-color: #3a3a3a;
+  /* Hintergrundfarbe */
+  border-radius: 5px;
+  /* Abgerundete Ecken */
 }
 
 /* Stil für die Titel */
 #parking-list h2 {
-  font-size: 1.8em; /* Schriftgröße */
-  margin: 0 0 10px 0; /* Abstand unterhalb des Titels */
-  color: #333;
+  font-size: 1.8em;
+  /* Schriftgröße */
+  margin: 0 0 10px 0;
+  /* Abstand unterhalb des Titels */
+  color: #a3a3a3;
 }
 
 /* Stil für die Paragrafen */
 #parking-list p {
-  margin: 5px 0; /* Abstand unterhalb des Paragrafen */
-  font-size: 1.1em; /* Schriftgröße */
-  color: #555;
+  margin-left: 0px;
+  padding: 0px;
+  font-size: 1.1em;
+  /* Schriftgröße */
+  color: #a5a5a5;
+  ;
 }
 
 /* Stil für die Links */
 #parking-list a {
-  color: #0066cc; /* Linkfarbe */
-  text-decoration: none; /* Keine Unterstreichung */
-  margin-top: 10px;
+  color: #14589b;
+  /* Linkfarbe */
+  text-decoration: none;
+  /* Keine Unterstreichung */
+  margin-left: 0px;
+  margin-top: 5px;
+  padding: 0px;
+  font-size: 1em;
+  /* Schriftgröße */
 }
 
 #parking-list a:hover {
-  text-decoration: underline; /* Unterstreichung beim Hover */
+  text-decoration: underline;
+  /* Unterstreichung beim Hover */
+}
+
+
+@media screen and (max-width: 1300px) {
+  body {
+    background-color: seagreen;
+  }
+  #handkarte {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: fit-content;
+  }
+  
+  img {
+    position: relative;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    z-index: 1;
+  }
+  
 }
