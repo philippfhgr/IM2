@@ -9,14 +9,17 @@ p {
   font-size: 12pt;
   line-height: 1.5em;
   padding: 0 50px;
-  width: 60%;
   text-align: center;
 }
 
 about.h1 {
   font-size: 80pt;
-  color: black;
+  color: #2C3E50;
 } 
+
+about.h2 {
+  font-size: 15pt;
+}
 
 h2 {
   font-size: 15pt;
@@ -28,7 +31,7 @@ ul.navbar {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: white;
+  background-color: #2C3E50;
   display: flex;
   justify-content: center; /* Zentriert die Navigationselemente */
 }
@@ -40,18 +43,18 @@ ul.navbar li {
 ul.navbar li a {
   display: block;
   padding: 20px;
-  color: black;
+  color: white;
   text-decoration: none; /* Entfernt die Unterstreichung */
-  border: 2px solid #ddd; /* Füge einen Rahmen hinzu */
+  border: 2px solid transparent; /* Unsichtbarer Rand */
   border-radius: 5px; /* Runde die Ecken ab */
   transition: background-color 0.3s, color 0.3s; /* Übergang für Farbänderungen */
   margin: 5px; /* Abstand zwischen den Links */
 }
 
 ul.navbar li a:hover {
-  background-color: #f0f0f0; /* Hintergrundfarbe beim Hover */
-  color: #007BFF; /* Textfarbe beim Hover */
-  border-color: #007BFF; /* Randfarbe beim Hover */
+  background-color: #F0F0F0; /* Hellgrau beim Hover */
+  color: #007BFF; /* Blau beim Hover */
+  border-color: #007BFF; /* Blau für den Rand beim Hover */
 }
 
 
@@ -282,7 +285,7 @@ img {
   /* Ensures padding and border are included in the width */
   padding: 5px;
   /* Add padding for spacing */
-  border: 1px solid #ddd;
+  border: 1px solid #000000;
   background-color: #f9f9f9;
   margin: 5px 0;
 }
@@ -290,10 +293,9 @@ img {
 /* About us Bilder */
 .image-container {
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 60px;
-  /* Adjust the space between images */
+  gap: 20px; /* Abstand zwischen den Bildern */
 }
 
 .image-container h2 {
@@ -311,6 +313,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 220px; /* Stellt sicher, dass alle Divs dieselbe Breite haben */
 }
 
 .image-container img {
@@ -340,7 +343,7 @@ img {
   /* Abstand zwischen den Listenelementen */
   padding: 15px;
   /* Innenabstand */
-  background-color: #3a3a3a;
+  background-color: #ffffff;
   /* Hintergrundfarbe */
   border-radius: 5px;
   /* Abgerundete Ecken */;
@@ -352,7 +355,7 @@ img {
   /* Schriftgröße */
   margin: 0 0 10px 0;
   /* Abstand unterhalb des Titels */
-  color: #a3a3a3;
+  color: #000000;
 }
 
 /* Stil für die Paragrafen */
@@ -361,7 +364,7 @@ img {
   padding: 0px;
   font-size: 1.1em;
   /* Schriftgröße */
-  color: #a5a5a5;
+  color: #000000;
   text-align: left;
 }
 
@@ -383,6 +386,8 @@ img {
   /* Unterstreichung beim Hover */
 }
 
+/* Suchleiste */
+
 .search-container {
   text-align: center;
   margin: 20px 0;
@@ -401,7 +406,7 @@ img {
 /* Media Queries */
 @media screen and (max-width: 1300px) {
   body {
-    background-color: seagreen; /* media query active */
+    background-color: rgb(255, 255, 255); /* media query active */
   }
   
   img {
