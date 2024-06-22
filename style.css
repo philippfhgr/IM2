@@ -17,10 +17,6 @@ about.h1 {
   color: #2C3E50;
 } 
 
-about.h2 {
-  font-size: 15pt;
-}
-
 h2 {
   font-size: 15pt;
 }
@@ -302,7 +298,7 @@ img {
   text-align: center;
   margin-top: 10px;
   max-width: 210px;
-  /* Match the width of the images */
+  margin-top: 20px;
 }
 
 .image-container p {
