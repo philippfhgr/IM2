@@ -86,7 +86,7 @@ header {
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.7);
-  z-index: 1;
+  z-index: 3;
   display: none;
 }
 
@@ -102,7 +102,7 @@ header {
   text-align: center;
   padding: 20px;
   box-sizing: border-box;
-  z-index: 3;
+  z-index: 4;
 }
 
 .popup .close-btn {
@@ -254,12 +254,16 @@ img {
   display: none;
 }
 
-
 .dot {
   height: 25px;
   width: 25px;
   border-radius: 50%;
   display: inline-block;
+}
+
+.dot:hover {
+  cursor: pointer;
+  border: #007BFF 2px solid;
 }
 
 .two-column-list {
@@ -324,11 +328,8 @@ img {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
-  /* Entfernt Standard-Listenpunkte */
   padding: 0;
-  /* Entfernt Standard-Padding */
   margin: 0;
-  /* Entfernt Standard-Rand */
 }
 
 /* Stil für jedes Listenelement */
@@ -342,7 +343,7 @@ img {
   background-color: #3a3a3a;
   /* Hintergrundfarbe */
   border-radius: 5px;
-  /* Abgerundete Ecken */
+  /* Abgerundete Ecken */;
 }
 
 /* Stil für die Titel */
@@ -361,7 +362,7 @@ img {
   font-size: 1.1em;
   /* Schriftgröße */
   color: #a5a5a5;
-  ;
+  text-align: left;
 }
 
 /* Stil für die Links */
@@ -382,30 +383,6 @@ img {
   /* Unterstreichung beim Hover */
 }
 
-
-@media screen and (max-width: 1300px) {
-  body {
-    background-color: seagreen;
-  }
-  #handkarte {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    width: fit-content;
-  }
-  
-  img {
-    position: relative;
-    border-radius: 5px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    z-index: 1;
-  }
-  
-}
-
 .search-container {
   text-align: center;
   margin: 20px 0;
@@ -416,5 +393,24 @@ img {
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ddd;
-  border-radius: 10px;
+  border-radius: 5px;
+}
+
+
+
+/* Media Queries */
+@media screen and (max-width: 1300px) {
+  body {
+    background-color: seagreen; /* media query active */
+  }
+  
+  img {
+    height: auto;
+    width: 700px;
+  }
+
+  .dot {
+    height: 20px;
+    width: 20px;
+  }
 }
