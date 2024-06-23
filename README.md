@@ -9,10 +9,10 @@ Wir hatten Probleme die Punkte der Parkhäsuer auf der statischen Karte zu fixie
 
 ## Schwierigkeiten
 Interaktive Karten benötigen mehr Wissen und Hintergrundinformationen, um sie richtig anwenden zu können als wir hatten. Wir haben versucht Google Maps und Mapbox einzubinden, was leider nicht reibungslos funktionierte. Wir konnten die Karten einbinden, sind aber an den Markierungen für die Parkhäuser gescheitert. Diese müssten bereits in der Karte vorhanden sein, ansonsten würden sie beim Verschieben der Karte nicht am richtig Ort bleiben. Zusätzlich bräuchten die Markierungen mit der Parking API verbundene Popups. Da ein Verschieben eigentlich nicht nötig ist, Basel bleibt an einem Ort, haben wir uns auf eine statische Karte geeinigt. So profitieren wir auch von schnelleren Ladezeiten.
-Die Absprache untereinander war sicherlich auch eine Schwierigkeit. Wer arbeitet wann am Code und erledigt was? Gerade gegen Ende, wo alle nochmals dran arbeiten wollten, mussten wir vermehrt kommunizieren und uns absprechen. 
+Die Absprache untereinander war sicherlich auch eine Schwierigkeit. Wer arbeitet wann am Code und erledigt was? Gerade gegen Ende, wo alle nochmals dran arbeiten wollten, mussten wir vermehrt kommunizieren und uns absprechen.
+Wir hatten Schwierigkeiten, falsch gelieferte Daten auszusortieren. Durch die Sturktur auf der Karte wurden die Daten direkt in Punkte umgewandelt auch wenn sie undefined oder unsinnig (Post) waren. Dadurch wurden andere Parkhäuser verdrängt und bekamen keinen Punkt mehr. Wir mussten die Daten aufnehmen, verarbeiten nur um sie dann nicht anzuzeigen. Zu einem späteren Zeitpunkt konnten wir für die Liste einen Filter einrichten, so dass die Daten garnicht erst angenommen werden. Das ist sicher die bessere Lösung. Also eine Schwierigkeit die in einem Learning resultierte.
 
 
 ## Benutzte Ressourcen
 
-- ChatGPT
-- w3schools
+Wir benutzten ChatGPT, W3Schools und diverse Foren. Für gewisse Themen wie die positions haben wir uns auch YT-Videos angeschaut. Den Code haben wir auch mit dem Code Validator von W3 validiert.
