@@ -78,6 +78,18 @@ header {
   text-align: center;
 }
 
+.popup a {
+  text-align: left;
+  margin: 0px;
+  padding-left: 0px;
+  text-decoration: none;
+  color: #14589b;
+}
+
+.popup a:hover {
+  text-decoration: underline;
+}
+
 .popup .overlay {
   position: fixed;
   top: 0px;
@@ -386,14 +398,17 @@ img {
 
 .search-container {
   text-align: center;
-  margin: 20px 0;
+  margin-top: 80px;
+  margin-bottom: 30px;
+
 }
 
 #searchBar {
+  height: 30px;
   width: 30%;
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ddd;
+  border: 1px solid #000000;
   border-radius: 5px;
 }
 
@@ -401,17 +416,84 @@ img {
 
 /* Media Queries */
 @media screen and (max-width: 1300px) {
-  body {
-    background-color: rgb(255, 255, 255); /* media query active */
-  }
   
   img {
     height: auto;
     width: 700px;
   }
 
-  .dot {
-    height: 20px;
-    width: 20px;
+  .badbahnhof {
+    top: 20px;
+    left: 200px;
+  }
+  
+  .claramatte {
+    top: 500px;
+    left: 20px;
+  }
+  
+  .steinen {
+    top: 400px;
+    left: 600px;
+  }
+  
+  .city {
+    top: 500px;
+    left: 500px;
+  }
+  
+  .storchen {
+    top: 100px;
+    left: 800px;
+  }
+  
+  .aeschen {
+    top: 100px;
+    left: 850px;
+  }
+  
+  .kunstmuseum {
+    top: 200px;
+    left: 950px;
+  }
+  
+  .messe {
+    top: 650px;
+    left: 980px;
+  }
+  
+  .europe {
+    top: 150px;
+    left: 820px;
+  }
+  
+  .rebgasse {
+    top: 200px;
+    left: 850px;
+  }
+  
+  .clarahuus {
+    top: 650px;
+    left: 650px;
+  }
+  
+  .elisabethen {
+    top: 750px;
+    left: 680px;
+  }
+  
+  .bahnhofsued {
+    top: 300px;
+    left: 980px;
+  }
+  
+  .anfos {
+    top: 350px;
+    left: 830px;
+  }
+  
+  .centralbahnparking {
+    top: 370px;
+    left: 860px;
   }
 }
