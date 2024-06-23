@@ -114,8 +114,8 @@ const lat = parking.geo_point_2d.lat;
 
               listItem.innerHTML = `
                   <h2>${parking.title}</h2>
-                  <p> Total Parkplätze: ${parking.total}</p>
-                  <p>Freie Parkplätze: ${parking.free} von ${parking.total}</p>
+                  <p>Freie Parkplätze: ${parking.free}</p>
+                  <p>Total Parkplätze: ${parking.total}</p>
                   <p>Auslastung: ${auslastungProzent}%</p>
                   <a href="${parking.link}" target="_blank">Webseite Parkhaus</a>
                   <a href="https://www.google.ch/maps/search/?api=1&query=${lat},${lon}" target="_blank">Navigation</a>

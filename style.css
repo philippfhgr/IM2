@@ -1,65 +1,101 @@
+:root {
+  --primary-color: #1f1068;
+  --secondary-color: #ffcc00;
+  --text-color: #333;
+  --background-color: #f9f9f9;
+  --border-radius: 5px;
+  --transition-duration: 0.3s;
+  --font-size-base: 12pt;
+  --font-size-h1: 100px;
+  --font-size-h2: 15pt;
+  --font-family: Arial, sans-serif;
+  --font-family-title: 'Poppins', sans-serif;
+}
+
 body {
-  background-color:white;
+  background-color: var(--background-color);
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: var(--font-family);
+}
+
+.main-header {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  color: white;
+}
+
+.main-header h1 {
+  font-family: var(--font-family-title);
+  font-size: 3em;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 p {
-  font-size: 12pt;
+  font-size: var(--font-size-base);
   line-height: 1.5em;
   padding: 0 50px;
   text-align: center;
 }
 
-about.h1 {
-  font-size: 80pt;
-  color: #2C3E50;
-} 
 
+
+about .h1 {
+  font-size: var(--font-size-h1);
+  color: var(--primary-color);
+}
+
+about .h2,
 h2 {
-  font-size: 15pt;
+  font-size: var(--font-size-h2);
 }
 
 /* Navigationsbar */
-ul.navbar {
+.navbar {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #2C3E50;
+  background-color: var(--primary-color);
   display: flex;
-  justify-content: center; /* Zentriert die Navigationselemente */
+  justify-content: center;
 }
 
-ul.navbar li {
+.navbar li {
   float: left;
 }
 
-ul.navbar li a {
+.navbar li a {
   display: block;
   padding: 20px;
-  color: white;
-  text-decoration: none; /* Entfernt die Unterstreichung */
-  border: 2px solid transparent; /* Unsichtbarer Rand */
-  border-radius: 5px; /* Runde die Ecken ab */
-  transition: background-color 0.3s, color 0.3s; /* Übergang für Farbänderungen */
-  margin: 5px; /* Abstand zwischen den Links */
+  color: var(--background-color);
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: var(--border-radius);
+  transition: background-color var(--transition-duration), color var(--transition-duration);
+  margin: 5px;
 }
 
-ul.navbar li a:hover {
-  background-color: #F0F0F0; /* Hellgrau beim Hover */
-  color: #007BFF; /* Blau beim Hover */
-  border-color: #007BFF; /* Blau für den Rand beim Hover */
+.navbar li a:hover {
+  background-color: #F0F0F0;
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
 }
-
 
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: white;
+  background-color: var(--background-color);
 }
 
 li {
@@ -69,11 +105,11 @@ li {
 li a {
   display: block;
   padding: 20px;
-  color: black;
+  color: var(--text-color);
 }
 
 header {
-  color: rgb(0, 0, 0);
+  color: var(--text-color);
   padding: 20px 0;
   text-align: center;
 }
@@ -92,8 +128,8 @@ header {
 
 .popup .overlay {
   position: fixed;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.7);
@@ -106,14 +142,14 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
-  background: #fff;
+  background: var(--background-color);
   width: 350px;
   height: 220px;
-  z-index: 2;
   text-align: center;
   padding: 20px;
   box-sizing: border-box;
   z-index: 4;
+  border-radius: var(--border-radius);
 }
 
 .popup .close-btn {
@@ -124,7 +160,7 @@ header {
   width: 30px;
   height: 30px;
   background: #222;
-  color: #fff;
+  color: var(--background-color);
   font-size: 25px;
   font-weight: 600;
   line-height: 30px;
@@ -141,25 +177,148 @@ header {
   transform: translate(-50%, -50%) scale(1);
 }
 
-
 #handkarte {
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   display: block;
   width: fit-content;
 }
 
 img {
   position: relative;
-  border-radius: 5px;
-  margin-left: auto;
-  margin-right: auto;
+  border-radius: var(--border-radius);
+  margin: 0 auto;
   display: block;
   z-index: 1;
 }
 
+.dot {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: inline-block;
+}
 
+.dot:hover {
+  cursor: pointer;
+  border: var(--secondary-color) 2px solid;
+}
+
+.two-column-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.two-column-list li {
+  flex: 0 0 50%;
+  box-sizing: border-box;
+  padding: 5px;
+  border: 1px solid var(--text-color);
+  background-color: #f9f9f9;
+  margin: 5px 0;
+}
+
+/* About us Bilder */
+.image-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.image-container h2 {
+  text-align: center;
+  margin-top: 10px;
+  max-width: 210px;
+}
+
+.image-container p {
+  text-align: center;
+}
+
+.image-container div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 220px;
+}
+
+.image-container img {
+  width: 210px;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+/* Grundstil für die Liste */
+#parking-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Stil für jedes Listenelement */
+#parking-list li {
+  flex: 1 1 calc(50% - 20px);
+  margin: 10px;
+  padding: 15px;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+}
+
+/* Stil für die Titel */
+#parking-list h2 {
+  font-size: 1.8em;
+  margin: 0 0 10px 0;
+  color: var(--text-color);
+}
+
+/* Stil für die Paragrafen */
+#parking-list p {
+  margin: 0;
+  padding: 0;
+  font-size: 1.1em;
+  color: var(--text-color);
+  text-align: left;
+}
+
+/* Stil für die Links */
+#parking-list a {
+  color: #14589b;
+  text-decoration: none;
+  margin: 5px 0 0 0;
+  padding: 0;
+  font-size: 1em;
+}
+
+#parking-list a:hover {
+  text-decoration: underline;
+}
+
+/* Suchleiste */
+
+.search-container {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 30px;
+
+}
+
+#searchBar {
+  height: 30px;
+  width: 30%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+/* Kartenkoordinaten */
 .badbahnhof,
 .claramatte,
 .steinen,
@@ -176,7 +335,7 @@ img {
 .anfos,
 .centralbahnparking {
   background: none;
-  border: 0px;
+  border: 0;
   z-index: 2;
   position: absolute;
 }
@@ -265,152 +424,6 @@ img {
   display: none;
 }
 
-.dot {
-  height: 25px;
-  width: 25px;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.dot:hover {
-  cursor: pointer;
-  border: #007BFF 2px solid;
-}
-
-.two-column-list {
-  display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
-  /* Remove default bullets */
-  padding: 0;
-  margin: 0;
-}
-
-.two-column-list li {
-  flex: 0 0 50%;
-  /* Each item takes up 50% of the width */
-  box-sizing: border-box;
-  /* Ensures padding and border are included in the width */
-  padding: 5px;
-  /* Add padding for spacing */
-  border: 1px solid #000000;
-  background-color: #f9f9f9;
-  margin: 5px 0;
-}
-
-/* About us Bilder */
-.image-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px; /* Abstand zwischen den Bildern */
-}
-
-.image-container h2 {
-  text-align: center;
-  margin-top: 10px;
-  max-width: 210px;
-  margin-top: 20px;
-}
-
-.image-container p {
-  text-align: center;
-}
-
-.image-container div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 220px; /* Stellt sicher, dass alle Divs dieselbe Breite haben */
-}
-
-.image-container img {
-  width: 210px;
-  /* Set the width of all images to the same value */
-  height: 290px;
-  /* Set the height of all images to the same value */
-  object-fit: cover;
-  /* Ensure the image covers the container */
-  border-radius: 50px;
-}
-
-/* Grundstil für die Liste */
-#parking-list {
-  display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* Stil für jedes Listenelement */
-#parking-list li {
-  flex: 1 1 calc(50% - 20px);
-  /* Gibt jedem Listenelement eine Basisbreite von 50%, abzüglich des Abstands */
-  margin: 10px;
-  /* Abstand zwischen den Listenelementen */
-  padding: 15px;
-  /* Innenabstand */
-  background-color: #ffffff;
-  /* Hintergrundfarbe */
-  border-radius: 5px;
-  /* Abgerundete Ecken */;
-}
-
-/* Stil für die Titel */
-#parking-list h2 {
-  font-size: 1.8em;
-  /* Schriftgröße */
-  margin: 0 0 10px 0;
-  /* Abstand unterhalb des Titels */
-  color: #000000;
-}
-
-/* Stil für die Paragrafen */
-#parking-list p {
-  margin-left: 0px;
-  padding: 0px;
-  font-size: 1.1em;
-  /* Schriftgröße */
-  color: #000000;
-  text-align: left;
-}
-
-/* Stil für die Links */
-#parking-list a {
-  color: #14589b;
-  /* Linkfarbe */
-  text-decoration: none;
-  /* Keine Unterstreichung */
-  margin-left: 0px;
-  margin-top: 5px;
-  padding: 0px;
-  font-size: 1em;
-  /* Schriftgröße */
-}
-
-#parking-list a:hover {
-  text-decoration: underline;
-  /* Unterstreichung beim Hover */
-}
-
-/* Suchleiste */
-
-.search-container {
-  text-align: center;
-  margin-top: 80px;
-  margin-bottom: 30px;
-
-}
-
-#searchBar {
-  height: 30px;
-  width: 30%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #000000;
-  border-radius: 5px;
-}
 
 
 
