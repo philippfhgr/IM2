@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 listItem.innerHTML = `
                     <h2>${parking.title}</h2>
-                    <p> Total Parkplätze: ${parking.total}</p>
-                    <p>Freie Parkplätze: ${parking.free} von ${parking.total}</p>
+                    <p>Freie Parkplätze: ${parking.free}</p>
+                    <p>Total Parkplätze: ${parking.total}</p>
                     <p>Auslastung: ${auslastungProzent}%</p>
                     <a href="${parking.link}" target="_blank">Webseite Parkhaus</a>
                     <a href="https://www.google.ch/maps/place/${encodeURIComponent(parking.name)}" target="_blank">Navigation</a>

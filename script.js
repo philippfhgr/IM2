@@ -30,7 +30,6 @@ async function getDataAndColorize() {
       let dot = document.querySelectorAll(".dot")[i];
       if (dot) {
         dot.style.backgroundColor = knopfColor;
-        console.log("Farbe für Parkhaus " + parkingLot.name + ": " + knopfColor);
       }
       
       // Update the free spaces in the popup
@@ -41,9 +40,6 @@ async function getDataAndColorize() {
           freeSpacesElement.textContent = freiePlaetze + " freie Parkplätze von " + totalPlaetze;
         }
       }
-
-      console.log("Auslastung in Prozent: " + (occupancy)); // Ausgabe: Auslastung des Parkhauses
-      console.log("Anzahl freie Parkplätz: " + (freiePlaetze)); // Ausgabe: freie Parkplätze
     }
 
     // Eventlistener für Popup-Buttons einrichten
@@ -72,9 +68,9 @@ getDataAndColorize(); // Funktion aufrufen, um Daten abzurufen und die Knöpfe z
 
 function getColorFromOccupancy(occupancy) {
   if (occupancy == 100) {
-    return "black"; // Rot wenn voll
+    return "black"; // Schwarz wenn voll
   } else if (occupancy >= 90) {
-    return "#FF0000"; // Orange bei hoher Auslastung
+    return "#FF0000"; // Rot bei hoher Auslastung
   } else if (occupancy >= 70) {
     return "orange"; // Orange bei mittlerer Auslastung
   } else {
@@ -90,7 +86,6 @@ document.addEventListener('DOMContentLoaded', function() {
   fetch('https://data.bs.ch/api/explore/v2.1/catalog/datasets/100088/records?limit=20')
       .then(response => response.json())
       .then(data => {
-          console.log('API Response:', data); // Log the entire response for debugging
 
           const results = data.results; // Access the 'results' array
           if (!results || !Array.isArray(results)) {
